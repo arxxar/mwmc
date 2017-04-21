@@ -40,7 +40,7 @@ mc_stop() {
   do
     MCINSTANCE="$line"
     echo stopping $MCINSTANCE
-    as_user "screen -p 0-S ${MCINSTANCE} -X eval 'stuff stop\015'"
+    as_user "screen -p 0 -S ${MCINSTANCE} -X eval 'stuff stop\015'"
   done < "$MCFILENAME"
 }
 
