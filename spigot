@@ -1,0 +1,59 @@
+#!/bin/sh
+#
+### BEGIN INIT INFO
+# Provides:   spigot
+# Required-Start: $local_fs $remote_fs screen-cleanup
+# Required-Stop:  $local_fs $remote_fs
+# Should-Start:   $network
+# Should-Stop:    $network
+# Default-Start:  2 3 4 5
+# Default-Stop:   0 1 6
+# Short-Description:    Minecraft server
+# Description:    Starts the minecraft server
+### END INIT INFO
+
+MCPATH='/minecraft'
+MCINSTANCES='mcinstances'
+MCFILENAME=$MCPATH/$MCINSTANCES
+USERNAME='ec2-user'
+
+ME=`whoami`
+as_user() {
+  if [ "$ME" = "$USERNAME" ] ; then
+    bash -c "$1"
+  else
+    su - "$USERNAME" -c "$1"
+  fi
+}
+
+mc_start() {
+  while read -r line
+  do
+    MCINSTANCE="$line"
+    echo starting $MCINSTANCE
+    as_user "cd $MCPATH/$MCINSTANCE && screen -dmS ${MCINSTANCE} java -Xmx1G -jar $MCPATH/spigot.jar nogui"
+  done < "$MCFILENAME"                                                  }
+
+mc_stop() {
+  while read -r line
+  do
+    MCINSTANCE="$line"
+    echo stopping $MCINSTANCE
+    as_user "screen -p 0-S ${MCINSTANCE} -X eval 'stuff stop\015'"
+  done < "$MCFILENAME"
+}
+
+#Start-Stop here
+case "$1" in
+  start)
+    mc_start
+    ;;
+  stop)
+    mc_stop
+    ;;
+  *)
+ echo "Usage: $0 {start|stop|update|backup|status|restart|command \"server command\"}"
+  exit 1                                                                  ;;
+esac
+
+exit 0
