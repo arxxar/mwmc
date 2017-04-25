@@ -129,4 +129,5 @@ renders["deltaCave"] = {
 
 
 outputdir = "/minecraft/mcmap"
+google_api_key = "AIzaSyCWI02T7hmPVUobG5Csdz08BNDnR9-ZTPE"
 
