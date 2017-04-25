@@ -8,103 +8,121 @@ my_cave = [Base(), EdgeLines(), Cave(only_lit=True), DepthTinting()]
 
 renders["alfaN"] = {
     "world": "alfa",
-    "title": "alfa N",
+    "title": "Nord",
     "northdirection" : "upper-left",
 }
 
 renders["alfaW"] = {
     "world": "alfa",
-    "title": "alfa W",
+    "title": "Ouest",
     "northdirection" : "lower-left",
 }
 
 renders["alfaS"] = {
     "world": "alfa",
-    "title": "alfa S",
+    "title": "Sud",
     "northdirection" : "lower-right",
 }
 
 renders["alfaE"] = {
     "world": "alfa",
-    "title": "alfa E",
+    "title": "Est",
     "northdirection" : "upper-right",
+}
+
+renders["alfaCave"] = {
+    "world": "alfa",
+    "title": "Cave",
+    "rendermode": my_cave
 }
 
 renders["bravoN"] = {
     "world": "bravo",
-    "title": "bravo N",
+    "title": "Nord",
     "northdirection" : "upper-left",
 }
 
 renders["bravoW"] = {
     "world": "bravo",
-    "title": "bravo W",
+    "title": "Ouest",
     "northdirection" : "lower-left",
 }
 
 renders["bravoS"] = {
     "world": "bravo",
-    "title": "bravo S",
+    "title": "Sud",
     "northdirection" : "lower-right",
 }
 
 renders["bravoE"] = {
     "world": "bravo",
-    "title": "bravo E",
+    "title": "Est",
     "northdirection" : "upper-right",
+}
+
+renders["bravoCave"] = {
+    "world": "bravo",
+    "title": "Cave",
+    "rendermode": my_cave
 }
 
 renders["charlieN"] = {
     "world": "charlie",
-    "title": "charlie N",
+    "title": "Nord",
     "northdirection" : "upper-left",
 }
 
 renders["charlieW"] = {
     "world": "charlie",
-    "title": "charlie W",
+    "title": "Ouest",
     "northdirection" : "lower-left",
 }
 
 renders["charlieS"] = {
     "world": "charlie",
-    "title": "charlie S",
+    "title": "Sud",
     "northdirection" : "lower-right",
 }
 
 renders["charlieE"] = {
     "world": "charlie",
-    "title": "charlie E",
+    "title": "Est",
     "northdirection" : "upper-right",
+}
+
+renders["charlieCave"] = {
+    "world": "charlie",
+    "title": "Cave",
+    "rendermode": my_cave
 }
 
 renders["deltaN"] = {
     "world": "delta",
-    "title": "delta N",
+    "title": "Nord",
     "northdirection" : "upper-left",
 }
 
 renders["deltaW"] = {
     "world": "delta",
-    "title": "delta W",
+    "title": "Ouest",
     "northdirection" : "lower-left",
 }
 
 renders["deltaS"] = {
     "world": "delta",
-    "title": "delta S",
+    "title": "Sud",
     "northdirection" : "lower-right",
 }
 
 renders["deltaE"] = {
     "world": "delta",
-    "title": "delta E",
+    "title": "Est",
     "northdirection" : "upper-right",
 }
 
 renders["deltaCave"] = {
     "world": "delta",
-    "title": "delta cave",
+    "title": "Cave",
     "rendermode": my_cave
 }
 
