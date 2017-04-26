@@ -4,25 +4,14 @@ EC2 Installation
 
 sudo yum update
 
-+------------+------------+-----------+ 
-| Header 1   | Header 2   | Header 3  | 
-+============+============+===========+ 
-| body row 1 | column 2   | column 3  | 
-+------------+------------+-----------+ 
-| body row 2 | Cells may span columns.| 
-+------------+------------+-----------+ 
-| body row 3 | Cells may  | - Cells   | 
-+------------+ span rows. | - contain | 
-| body row 4 |            | - blocks. | 
-+------------+------------+-----------+
-
 -----------
 Dynamic DNS
 -----------
 
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dynamic-dns.html
 
-Code::
+Enter at the prompt::
+
   sudo yum-config-manager --enable epel
   sudo yum install -y noip
   sudo chkconfig noip on
