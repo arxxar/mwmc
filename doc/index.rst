@@ -25,7 +25,6 @@ http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/set-hostname.html
   sudo vi /etc/sysconfig/network
   sudo reboot
 
------------------
 Mount Data Volume
 -----------------
 
@@ -50,6 +49,9 @@ http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
   sudo vi /etc/fstab
   sudo mount -a
   sudo reboot
+
+Build Spigot
+------------
 
 https://www.spigotmc.org/wiki/buildtools/
 
