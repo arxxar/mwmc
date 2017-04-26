@@ -10,11 +10,12 @@ Dynamic DNS
 
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dynamic-dns.html
 
-sudo yum-config-manager --enable epel
+``sudo yum-config-manager --enable epel``
 sudo yum install -y noip
 sudo chkconfig noip on
 chkconfig --list noip
 sudo service noip start
+
 
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/set-hostname.html
 
