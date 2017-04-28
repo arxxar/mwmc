@@ -33,7 +33,7 @@ mc_start() {
     MCINSTANCE="$line"
     echo starting $MCINSTANCE
     as_user "cd $MCPATH/$MCINSTANCE && screen -dmS ${MCINSTANCE} java -Xmx1G -jar $MCPATH/spigot.jar nogui"
-    curl -X POST https://maker.ifttt.com/trigger/testNotification/with/key/$MAKER_KEY
+    curl -X POST https://maker.ifttt.com/trigger/mc_$MCINSTANCE_Started/with/key/$MAKER_KEY
   done < "$MCFILENAME"
 }
 
