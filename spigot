@@ -16,6 +16,7 @@ MCPATH='/minecraft'
 MCINSTANCES='mcinstances'
 MCFILENAME=$MCPATH/$MCINSTANCES
 USERNAME='ec2-user'
+MAKER_KEY='nFhHeEXGq85qSLtsgCeisAphm0eKbU9RUflKH3oOPV5'
 
 ME=`whoami`
 as_user() {
@@ -32,7 +33,7 @@ mc_start() {
     MCINSTANCE="$line"
     echo starting $MCINSTANCE
     as_user "cd $MCPATH/$MCINSTANCE && screen -dmS ${MCINSTANCE} java -Xmx1G -jar $MCPATH/spigot.jar nogui"
-    curl -X POST https://maker.ifttt.com/trigger/testNotification/with/key/nFhHeEXGq85qSLtsgCeisAphm0eKbU9RUflKH3oOPV5
+    curl -X POST https://maker.ifttt.com/trigger/testNotification/with/key/$MAKER-KEY
   done < "$MCFILENAME"
 }
 
