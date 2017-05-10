@@ -1,3 +1,8 @@
+def playerIcons(poi):
+    if poi['id'] == 'Player':
+        poi['icon'] = "https://overviewer.org/avatar/%s" % poi['EntityId']
+        return "Last known location for %s" % poi['EntityId']
+
 worlds["alfa"] = "/minecraft/alfa/world"
 worlds["bravo"] = "/minecraft/bravo/world"
 worlds["charlie"] = "/minecraft/charlie/world"
