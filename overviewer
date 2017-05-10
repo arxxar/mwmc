@@ -4,3 +4,4 @@ sudo service spigot start
 sudo rm -rv /var/www/html/*
 cp /minecraft/index.html /minecraft/mcmap/index.html 
 sudo cp -Rv /minecraft/mcmap/* /var/www/html
+sudo service httpd restart
