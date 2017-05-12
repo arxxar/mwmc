@@ -1,3 +1,5 @@
+import os
+
 def playerIcons(poi):
     if poi['id'] == 'Player':
         poi['icon'] = "https://overviewer.org/avatar/%s" % poi['EntityId']
