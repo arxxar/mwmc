@@ -23,8 +23,8 @@ renders["MyWorldN"] = {
 renders["MyWorldCave"] = {
     "world": MYWORLD,
     "title": "Cave",
-    "rendermode": my_cave
-    'markers': [dict(name="Players", filterFunction=playerIcons)]
+    "rendermode": my_cave,
+    'markers': [dict(name="Players", filterFunction=playerIcons)],
 }
 
 outputdir = "/minecraft/mcmap/"
