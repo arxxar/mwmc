@@ -7,7 +7,7 @@ sudo service spigot stop
 overviewer.py --config=/minecraft/ovmyworld.py
 overviewer.py --config=/minecraft/ovmyworld.py --genpoi
 sudo service spigot start
-sudo rm -rv /var/www/html/*
+sudo rm -r /var/www/html/*
 cp /minecraft/index.html /minecraft/mcmap/index.html 
-sudo cp -Rv /minecraft/mcmap/* /var/www/html
+sudo cp -R /minecraft/mcmap/* /var/www/html
 sudo service httpd restart
