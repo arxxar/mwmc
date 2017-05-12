@@ -25,4 +25,4 @@ renders["MyWorldCave"] = {
     'markers': [dict(name="Players", filterFunction=playerIcons)]
 }
 
-outputdir = "/minecraft/mcmap/" + MYWORLD
+outputdir = "/minecraft/mcmap/"
