@@ -3,23 +3,26 @@ def playerIcons(poi):
         poi['icon'] = "https://overviewer.org/avatar/%s" % poi['EntityId']
         return "Last known location for %s" % poi['EntityId']
 
-worlds["MyWorld"] = "/minecraft/" + os.environ['MYWORLD'] + "/world"
+MYWORLD = os.environ["MYWORLD"]
+    
+worlds[MYWORLD] = "/minecraft/" + MYWORLD + "/world"
 
 rendermode = "smooth_lighting"
 my_cave = [Base(), EdgeLines(), Cave(only_lit=True), DepthTinting()]
 
 
-renders["deltaN"] = {
-    "world": "MyWorld",
+renders["MyWorldN"] = {
+    "world": MYWORLD,
     "title": "Nord",
     "northdirection" : "upper-left",
 }
 
 
-renders["deltaCave"] = {
-    "world": "MyWorld",
+renders["MyWorldCave"] = {
+    "world": MYWORLD,
     "title": "Cave",
     "rendermode": my_cave
+    'markers': [dict(name="Players", filterFunction=playerIcons)]
 }
 
-outputdir = "/minecraft/mcmap"
+outputdir = "/minecraft/mcmap/" + MYWORLD
