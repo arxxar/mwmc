@@ -7,7 +7,7 @@ def playerIcons(poi):
     
 def chestFilter(poi):
     if poi['id'] == "Chest":
-        return ("Chest", "Chest with %d items" % len(poi['Items']))
+        return "Chest"
 
 MYWORLD = os.environ["MYWORLD"]
     
@@ -31,7 +31,7 @@ renders["MyWorldCave"] = {
     "title": "Cave",
     "rendermode": my_cave,
     "markers": [dict(name="Players", filterFunction=playerIcons),
-                dict(name="Chests", filterFunction=chestFilter, icon="chest.png", createInfoWindow=False)],
+                dict(name="Chests", filterFunction=chestFilter, icon="chest.png")],
 }
 
 outputdir = "/minecraft/mcmap/"
