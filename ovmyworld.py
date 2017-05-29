@@ -5,9 +5,9 @@ def playerIcons(poi):
         poi['icon'] = "https://overviewer.org/avatar/%s" % poi['EntityId']
         return "Last known location for %s" % poi['EntityId']
     
-def chestFilter(poi):
-    if poi['id'] == "Chest":
-        return "Chest"
+def signFilter(poi):
+    if poi['id'] == 'Sign' or poi['id'] == 'minecraft:sign':
+        return "\n".join([poi['Text1'], poi['Text2'], poi['Text3'], poi['Text4']])
 
 MYWORLD = os.environ["MYWORLD"]
     
@@ -22,7 +22,7 @@ renders["MyWorldN"] = {
     "title": "Nord",
     "northdirection" : "upper-left",
     "markers": [dict(name="Players", filterFunction=playerIcons),
-                dict(name="Chests", filterFunction=chestFilter)],
+                dict(name="Signs", filterFunction=signFilter)],
 }
 
 
@@ -31,7 +31,7 @@ renders["MyWorldCave"] = {
     "title": "Cave",
     "rendermode": my_cave,
     "markers": [dict(name="Players", filterFunction=playerIcons),
-                dict(name="Chests", filterFunction=chestFilter, icon="chest.png")],
+                dict(name="Signs", filterFunction=signFilter)],
 }
 
 outputdir = "/minecraft/mcmap/"
