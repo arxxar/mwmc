@@ -1,5 +1,6 @@
 sudo service spigot stop
 overviewer.py --config=/minecraft/ovconfig.py
+overviewer.py --config=/minecraft/ovconfig.py --genpoi
 sudo service spigot start
 sudo rm -r /var/www/html/*
 cp /minecraft/index.html /minecraft/mcmap/index.html 
