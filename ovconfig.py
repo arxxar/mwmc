@@ -42,7 +42,7 @@ renders["bravoN"] = {
 renders["bravoCave"] = {
     "world": "bravo",
     "title": "Cave",
-    "rendermode": my_cave
+    "rendermode": my_cave,
     "markers": [dict(name="Players", filterFunction=playerIcons),
                 dict(name="Signs", filterFunction=signFilter)],
 }
@@ -55,10 +55,10 @@ renders["charlieN"] = {
                 dict(name="Signs", filterFunction=signFilter)],
 }
 
-renders["charlieCave"] = {
+renders["charlie"] = {
     "world": "charlie",
     "title": "Cave",
-    "rendermode": my_cave
+    "rendermode": my_cave,
     "markers": [dict(name="Players", filterFunction=playerIcons),
                 dict(name="Signs", filterFunction=signFilter)],
 }
@@ -74,7 +74,7 @@ renders["deltaN"] = {
 renders["deltaCave"] = {
     "world": "delta",
     "title": "Cave",
-    "rendermode": my_cave
+    "rendermode": my_cave,
     "markers": [dict(name="Players", filterFunction=playerIcons),
                 dict(name="Signs", filterFunction=signFilter)],
 }
