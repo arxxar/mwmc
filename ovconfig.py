@@ -26,7 +26,7 @@ renders["alfaN"] = {
 renders["alfaCave"] = {
     "world": "alfa",
     "title": "Cave",
-    "rendermode": my_cave
+    "rendermode": my_cave,
     "markers": [dict(name="Players", filterFunction=playerIcons),
                 dict(name="Signs", filterFunction=signFilter)],
 }
