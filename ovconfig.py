@@ -2,7 +2,11 @@ def playerIcons(poi):
     if poi['id'] == 'Player':
         poi['icon'] = "https://overviewer.org/avatar/%s" % poi['EntityId']
         return "Last known location for %s" % poi['EntityId']
-
+    
+def signFilter(poi):
+    if poi['id'] == 'Sign' or poi['id'] == 'minecraft:sign':
+        return "\n".join([poi['Text1'], poi['Text2'], poi['Text3'], poi['Text4']])
+    
 worlds["alfa"] = "/minecraft/alfa/world"
 worlds["bravo"] = "/minecraft/bravo/world"
 worlds["charlie"] = "/minecraft/charlie/world"
@@ -15,122 +19,64 @@ renders["alfaN"] = {
     "world": "alfa",
     "title": "Nord",
     "northdirection" : "upper-left",
-}
-
-renders["alfaW"] = {
-    "world": "alfa",
-    "title": "Ouest",
-    "northdirection" : "lower-left",
-}
-
-renders["alfaS"] = {
-    "world": "alfa",
-    "title": "Sud",
-    "northdirection" : "lower-right",
-}
-
-renders["alfaE"] = {
-    "world": "alfa",
-    "title": "Est",
-    "northdirection" : "upper-right",
+    "markers": [dict(name="Players", filterFunction=playerIcons),
+                dict(name="Signs", filterFunction=signFilter)],
 }
 
 renders["alfaCave"] = {
     "world": "alfa",
     "title": "Cave",
     "rendermode": my_cave
+    "markers": [dict(name="Players", filterFunction=playerIcons),
+                dict(name="Signs", filterFunction=signFilter)],
 }
 
 renders["bravoN"] = {
     "world": "bravo",
     "title": "Nord",
     "northdirection" : "upper-left",
-}
-
-renders["bravoW"] = {
-    "world": "bravo",
-    "title": "Ouest",
-    "northdirection" : "lower-left",
-}
-
-renders["bravoS"] = {
-    "world": "bravo",
-    "title": "Sud",
-    "northdirection" : "lower-right",
-}
-
-renders["bravoE"] = {
-    "world": "bravo",
-    "title": "Est",
-    "northdirection" : "upper-right",
+    "markers": [dict(name="Players", filterFunction=playerIcons),
+                dict(name="Signs", filterFunction=signFilter)],
 }
 
 renders["bravoCave"] = {
     "world": "bravo",
     "title": "Cave",
     "rendermode": my_cave
+    "markers": [dict(name="Players", filterFunction=playerIcons),
+                dict(name="Signs", filterFunction=signFilter)],
 }
 
 renders["charlieN"] = {
     "world": "charlie",
     "title": "Nord",
     "northdirection" : "upper-left",
-}
-
-renders["charlieW"] = {
-    "world": "charlie",
-    "title": "Ouest",
-    "northdirection" : "lower-left",
-}
-
-renders["charlieS"] = {
-    "world": "charlie",
-    "title": "Sud",
-    "northdirection" : "lower-right",
-}
-
-renders["charlieE"] = {
-    "world": "charlie",
-    "title": "Est",
-    "northdirection" : "upper-right",
+    "markers": [dict(name="Players", filterFunction=playerIcons),
+                dict(name="Signs", filterFunction=signFilter)],
 }
 
 renders["charlieCave"] = {
     "world": "charlie",
     "title": "Cave",
     "rendermode": my_cave
+    "markers": [dict(name="Players", filterFunction=playerIcons),
+                dict(name="Signs", filterFunction=signFilter)],
 }
 
 renders["deltaN"] = {
     "world": "delta",
     "title": "Nord",
     "northdirection" : "upper-left",
-}
-
-renders["deltaW"] = {
-    "world": "delta",
-    "title": "Ouest",
-    "northdirection" : "lower-left",
-}
-
-renders["deltaS"] = {
-    "world": "delta",
-    "title": "Sud",
-    "northdirection" : "lower-right",
-}
-
-renders["deltaE"] = {
-    "world": "delta",
-    "title": "Est",
-    "northdirection" : "upper-right",
+    "markers": [dict(name="Players", filterFunction=playerIcons),
+                dict(name="Signs", filterFunction=signFilter)],
 }
 
 renders["deltaCave"] = {
     "world": "delta",
     "title": "Cave",
     "rendermode": my_cave
+    "markers": [dict(name="Players", filterFunction=playerIcons),
+                dict(name="Signs", filterFunction=signFilter)],
 }
-
-
 
 outputdir = "/minecraft/mcmap"
